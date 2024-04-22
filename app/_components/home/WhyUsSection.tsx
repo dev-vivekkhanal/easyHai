@@ -60,7 +60,10 @@ const WhyUsSection = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 ">
                 {stats?.map((stat) => {
                   return (
-                    <div className="border rounded-2xl border-slate-200 p-3 text-center space-y-2">
+                    <div
+                      key={stat?.title}
+                      className="border rounded-2xl border-slate-200 p-3 text-center space-y-2"
+                    >
                       <h2 className="font-bold text-2xl">{stat?.value}</h2>
                       <p className="text-gray text-xs">{stat?.title}</p>
                     </div>
