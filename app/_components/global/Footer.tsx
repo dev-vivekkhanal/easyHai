@@ -38,7 +38,9 @@ const Footer = () => {
         <div className="flex-1  flex flex-col  md:grid md:grid-cols-2 md:grid-rows-3 grid-flow-col gap-5  max-w-[130px] md:max-w-none">
           {footerData?.links?.map((footer_link) => {
             return (
-              <Link href={footer_link?.linkPath}>{footer_link?.linkName}</Link>
+              <Link key={footer_link?.linkName} href={footer_link?.linkPath}>
+                {footer_link?.linkName}
+              </Link>
             );
           })}
         </div>
