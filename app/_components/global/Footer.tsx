@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="flex gap-2 items-center">
             {footerData?.socials?.map((social) => {
               return (
-                <div>
+                <div key={social?.linkName}>
                   <div className="border p-3 border-slate-300 rounded-full">
                     <Image
                       src={social?.icon}
