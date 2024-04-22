@@ -7,15 +7,15 @@ export const headerData = {
     },
     {
       linkName: "About Us",
-      linkPath: "/about",
+      linkPath: "/",
     },
     {
       linkName: "Our Services",
-      linkPath: "/services",
+      linkPath: "/",
     },
     {
       linkName: "Why Us",
-      linkPath: "/why",
+      linkPath: "/",
     },
   ],
   buttons: [

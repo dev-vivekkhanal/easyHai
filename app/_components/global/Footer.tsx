@@ -8,13 +8,16 @@ const Footer = () => {
     <footer className="bg-lightestgray text-[#253837] text-xs">
       <div className="flex flex-row gap-10 sm:gap-5  w-[90%] mx-auto py-6">
         <div className="flex-1 flex flex-col gap-3 justify-between">
-          <Image
-            src={footerData?.logo}
-            alt="logo of the company"
-            width={100}
-            height={100}
-            priority
-          />
+          <div className="w-[100px]">
+            <Image
+              src={footerData?.logo}
+              alt="logo of the company"
+              width={100}
+              height={100}
+              className="w-auto h-auto"
+              priority
+            />
+          </div>
 
           <p className="max-w-[250px]">{footerData?.desc}</p>
 
@@ -28,6 +31,7 @@ const Footer = () => {
                       alt={social?.linkName}
                       width={15}
                       height={15}
+                      className="w-auto h-auto"
                     />
                   </div>
                 </div>

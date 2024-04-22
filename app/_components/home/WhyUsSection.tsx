@@ -4,7 +4,7 @@ import React from "react";
 interface headingContent {
   question: string;
   answer: string;
-  desc: string;
+  desc?: string;
 }
 
 const WhyUsSection = () => {
@@ -35,27 +35,51 @@ const WhyUsSection = () => {
   return (
     <section className="py-10 pr-[5%]">
       <div className="flex gap-5">
-        <Image
-          src={"/assets/whyUs.svg"}
-          alt="why us"
-          width={100}
-          height={100}
-          className="sm:flex-[0.55] hidden sm:block"
-          priority
-        />
+        <div className="sm:flex-[0.55]  relative hidden sm:block">
+          <Image
+            src={"/assets/whyUs.svg"}
+            alt="why us"
+            width={100}
+            height={100}
+            className="w-full"
+            priority
+          />
+          <div className="flex gap-2  w-max p-2 px-5 rounded-full shadow-md bg-white absolute top-[12%] md:top-[15%] right-[10%]">
+            <Image
+              src={"/assets/whyUsDiscountIcon.svg"}
+              alt="discount"
+              width={100}
+              height={100}
+              className="w-[20px]"
+            />
+            <h3 className="text-sm font-bold">Discounted Price</h3>
+          </div>
+        </div>
 
         <div className="sm:flex-[0.45] flex flex-col gap-5  justify-around">
           <SectionHeader content={section_heading_content} />
 
           <div className="pt-10 flex gap-5 ">
-            <Image
-              src={"/assets/whyUs.svg"}
-              alt="why us"
-              width={100}
-              height={100}
-              className="flex-1 sm:hidden"
-              priority
-            />
+            <div className="flex-1 sm:hidden relative">
+              <Image
+                src={"/assets/whyUs.svg"}
+                alt="why us"
+                width={100}
+                height={100}
+                className="w-full"
+                priority
+              />
+              <div className="flex gap-2  w-max p-2 px-5 rounded-full shadow-md bg-white absolute top-[10%] right-0">
+                <Image
+                  src={"/assets/whyUsDiscountIcon.svg"}
+                  alt="discount"
+                  width={100}
+                  height={100}
+                  className="w-[20px]"
+                />
+                <h3 className="text-sm font-bold">Discounted Price</h3>
+              </div>
+            </div>
             <div className="flex-1 max-w-[150px] sm:max-w-none w-[90%]  relative ">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 ">
                 {stats?.map((stat) => {
@@ -96,10 +120,10 @@ export const SectionHeader = (props: { content: headingContent }) => {
       <h3 className="text-primary uppercase font-bold tracking-widest text-lg ">
         {props?.content?.question}
       </h3>
-      <h1 className="font-semibold text-3xl w-[80%]">
-        {props?.content?.answer}
-      </h1>
-      <p className="text-gray text-xs w-[70%]">{props?.content?.desc}</p>
+      <h1 className="font-semibold text-3xl ">{props?.content?.answer}</h1>
+      {props?.content?.desc && (
+        <p className="text-gray text-xs w-[70%]">{props?.content?.desc}</p>
+      )}
     </div>
   );
 };

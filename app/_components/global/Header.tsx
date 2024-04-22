@@ -12,7 +12,7 @@ export const RenderCTA = () => {
         return (
           <button
             key={btn.cta_text}
-            className={` rounded-full text-sm font-medium px-4 lg:px-6 py-2 ${
+            className={` rounded-full text-sm font-medium px-4 lg:px-6 py-2 xl:px-7 xl:py-3 ${
               btn.type === "primary"
                 ? "bg-primary text-white"
                 : "bg-lightestgray"
@@ -56,6 +56,7 @@ const Header = () => {
           alt="logo of the company"
           width={100}
           height={100}
+          className="w-auto h-auto"
           priority
         />
       </div>

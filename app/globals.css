@@ -7,9 +7,29 @@
   --white: #ffffff;
   --black: #242424;
   --gray: #818181;
-  --lightest-gray: 255, 255, 255;
-  --green: 255, 255, 255;
-  --red: 255, 255, 255;
-  --light-gray: 255, 255, 255;
-  --light-blue: 255, 255, 255;
+  --lightest-gray: #f4f4f4;
+}
+
+.dot-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dot-group .carousel__dot {
+  width: 16px;
+  height: 16px;
+  border: none;
+  border-radius: 50%;
+  margin: 0 4px;
+  padding: 0;
+  background-color: var(--lightest-gray);
+  transition: all 0.4s ease-in-out;
+}
+.dot-group .carousel__dot--selected {
+  width: 30px;
+  height: 12px;
+  border-radius: 10px;
+  background-color: var(--primary);
+  transition: background 0.4s ease;
+  transition: all 0.4s ease-in-out;
 }

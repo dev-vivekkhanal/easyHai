@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section>
       <div className="flex gap-5">
-        <div className="flex-1 py-10 space-y-5  pl-[5%] ">
+        <div className="flex-1 py-10 space-y-5 lg:space-y-10 pl-[5%] ">
           <div className="flex gap-2  w-max p-2 px-5 rounded-full shadow-md bg-white">
             <h3 className="text-sm">Explore the services</h3>
             <Image
@@ -18,7 +18,7 @@ const HeroSection = () => {
             />
           </div>
 
-          <h1 className="font-extrabold text-4xl w-[90%]">
+          <h1 className="font-extrabold text-4xl xl:text-5xl w-[90%]">
             Lorem <span className="text-primary">ipsum is a dummy</span> text
             for websites
           </h1>
